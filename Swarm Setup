@@ -1,0 +1,8 @@
+Swarm Mgr1:
+docker run --restart=unless-stopped -h mgr1 --name mgr1 -d -p 3375:2375 swarm manage --replication --advertise SwarmMaster1_IP:3375 consul://172.27.59.77:8500/
+
+Swarm Mgr2:
+docker run --restart=unless-stopped -h mgr2 --name mgr2 -d -p 3375:2375 swarm manage --replication --advertise SwarmMaster2_IP:3375 consul://172.27.59.66:8500/
+
+Swarm Mgr3:
+docker run --restart=unless-stopped -h mgr3 --name mgr3 -d -p 3375:2375 swarm manage --replication --advertise SwarmMaster3_IP:3375 consul://172.27.59.75:8500/
